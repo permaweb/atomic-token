@@ -47,3 +47,28 @@ export async function create(data, tags) {
 ```
 
 For more examples, check out the Permaweb Cookbook - https://cookbook.g8way.io
+
+## IMPORTANT
+
+To successfully read this contract, you need to make sure that `useConstructor` is set to true.
+
+```js
+import { WarpFactory } from 'warp-contracts'
+
+const warp = WarpFactory.forMainnet()
+
+async function main() {
+  const result = await warp.contract(process.argv[2])
+    .setEvaluationOptions({
+      allowBigInt: true,
+      internalWrites: true,
+      unsafeClient: 'skip',
+      useConstructor: true
+    })
+    .readState()
+
+  console.log(result.cachedValue.state)
+}
+
+main()
+```
