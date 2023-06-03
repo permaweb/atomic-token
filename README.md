@@ -46,6 +46,20 @@ export async function create(data, tags) {
 }
 ```
 
+You will notice that the state is blank, this is because the constructor will default the core props of the contract. It will set the signer as the owner with a balance of one, and default the name and ticker properties.
+
+```json
+{
+  "name": "Atomic Asset",
+  "ticker": "AA",
+  "balances": {
+    [action.caller]: 1
+  }
+}
+```
+
+If you would like to override these defaults, just send your initial state object as the state.
+
 For more examples, check out the Permaweb Cookbook - https://cookbook.g8way.io
 
 ## IMPORTANT
