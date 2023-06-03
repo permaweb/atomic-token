@@ -1,0 +1,19 @@
+{
+  "name": "atomic-token",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "repository": "https://github.com/permaweb/atomic-token.git",
+  "author": "Tom Wilson <tom@hyper.io>",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.17.19",
+    "replace-in-file": "^7.0.1",
+    "warp-contracts": "^1.4.10",
+    "warp-contracts-plugin-deploy": "^1.0.8"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "deploy": "npx warp-contracts-cli deploy"
+  }
+}
