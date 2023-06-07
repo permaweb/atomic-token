@@ -53,7 +53,7 @@ You will notice that the state is blank, this is because the constructor will de
   "name": "Atomic Asset",
   "ticker": "AA",
   "balances": {
-    "[action.caller]": 1
+    "[action.caller]": 100
   }
 }
 ```
