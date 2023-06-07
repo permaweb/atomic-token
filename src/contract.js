@@ -1,5 +1,8 @@
 import { constructor } from './write/constructor.js'
 import { balance } from './read/balance.js'
+import { allow } from './write/allow.js'
+import { claim } from './write/claim.js'
+import { transfer } from './write/transfer.js'
 
 export async function handle(state, action) {
   switch (action.input?.function) {
