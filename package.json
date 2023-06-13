@@ -10,11 +10,15 @@
     "esbuild": "^0.17.19",
     "replace-in-file": "^7.0.1",
     "uvu": "^0.5.6",
-    "warp-contracts": "^1.4.10",
+    "warp-contracts": "^1.4.11",
     "warp-contracts-plugin-deploy": "^1.0.8"
   },
   "scripts": {
     "build": "node scripts/build.js",
-    "deploy": "npx warp-contracts-cli deploy"
+    "deploy": "node scripts/deploy.js",
+    "test": "uvu test"
+  },
+  "dependencies": {
+    "arweave": "^1.13.7"
   }
 }

@@ -4,7 +4,7 @@ export const claim = (state, action) => of({ state, action })
   .chain(validate)
   .map(update)
 
-function update({ state, action }) {
+function update({ state, action, idx }) {
   if (!state.balances[action.caller]) {
     state.balances[action.caller] = 0;
   }

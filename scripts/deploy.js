@@ -1,5 +1,6 @@
 import { SourceType, WarpFactory } from 'warp-contracts'
 import { DeployPlugin, ArweaveSigner } from 'warp-contracts-plugin-deploy'
+//import Arweave from 'arweave'
 import fs from 'fs'
 
 const jwk = JSON.parse(fs.readFileSync(process.argv[2], 'utf-8'))
@@ -31,6 +32,7 @@ async function main() {
       }
     }
   })
+
   console.log(result)
 }
 
