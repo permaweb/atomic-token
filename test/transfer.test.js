@@ -15,7 +15,7 @@ test('transfer', async () => {
       qty: 100
     }
   })
-  console.log(result)
+
   assert.equal(result.state.balances['wszkkrsxsdmiygqdlzhczxdnhxngtqwnhtabkwkhyli'], 100)
   assert.equal(result.state.balances['bacjdyljxfrovwffuszkbacwispcaegwgtfrxwuidwe'], 100)
   assert.ok(true)
