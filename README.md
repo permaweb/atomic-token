@@ -14,7 +14,7 @@ The goal of this contract is to create a permanent atomic token contract that is
 You can use this source tx to deploy your atomic assets.
 
 ```
-AaKdbvC2C8z7qIYKNUQdNihuDtA1GTHz2_Ok-vsHSbQ
+IvO1BQ0yZHRuc0HizabgKMZOwCx4xAPGYebCB-mmm70
 ```
 
 ## Example (Dispatch and Warp)
