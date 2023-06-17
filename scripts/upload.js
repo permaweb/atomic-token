@@ -4,7 +4,7 @@ import { WarpFactory } from 'warp-contracts'
 import { DeployPlugin } from 'warp-contracts-plugin-deploy'
 import fs from 'fs'
 
-const eyeblobNumber = 38
+const eyeblobNumber = 41
 const eyeblob = fs.readFileSync(`./eye-blob-${eyeblobNumber}.png`)
 const jwk = JSON.parse(fs.readFileSync('./wallet.json'))
 
@@ -14,7 +14,7 @@ async function main() {
     { name: 'Content-Type', value: 'image/png' },
     { name: 'App-Name', value: 'SmartWeaveContract' },
     { name: 'App-Version', value: '0.3.0' },
-    { name: 'Contract-Src', value: 'wzEWvLL9CeA0iAnabbo7PWrQVGb2oHp2o3_ZSa4bbGI' },
+    { name: 'Contract-Src', value: 'DAzJJphpcjv6im1hUgFNGVP91eG9tayhX6NgMsoOHBQ' },
     {
       name: 'Init-State', value: JSON.stringify({
         name: 'eye-blob',
@@ -29,7 +29,7 @@ async function main() {
     { name: 'Title', value: 'Eye Blob #' + eyeblobNumber },
     { name: 'Description', value: 'Eye Blob Collection' },
     { name: 'Topic:eye-blob', value: 'eye-blob' },
-    { name: 'Type', value: 'PST' }
+    { name: 'Type', value: 'image' }
 
   ]
   const result = await bundlr.upload(eyeblob, { tags })

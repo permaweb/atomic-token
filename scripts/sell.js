@@ -10,9 +10,9 @@ async function main() {
   })
 
   const result = await orderbook.sell({
-    assetId: 'C3ZEyjoBkda7DRUiGO67XSmdsQtJCTHkU5I45WEb2oU',
+    assetId: 'cJLpXX2StsvkdPbIHJp2TuTIpdDBRTWouD6o1Ig9-S8',
     qty: 100,
-    price: (.01 * 1e6) / 100
+    price: (.01 * 1e6) / 100 // unit price
   })
   console.log(result)
 }
