@@ -9,7 +9,7 @@ export async function handle(state, action) {
     case "__init":
       return constructor(state, action)
     case "balance":
-      return balance(state, action).extract()
+      return balance(state, action).fold(handleError, identity)
     case "transfer":
       return transfer(state, action).fold(handleError, identity)
     case "allow":

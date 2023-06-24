@@ -8,8 +8,8 @@ function validate({ state, action }) {
   if (!action.input.target) {
     action.input.target = action.caller;
   }
-  if (action.caller.length !== 43) {
-    return Left("Caller is not valid");
+  if (action.input.target.length !== 43) {
+    return Left("Target is not valid");
   }
   return Right({ state, action });
 }
