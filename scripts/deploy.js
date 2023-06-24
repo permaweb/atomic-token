@@ -18,10 +18,8 @@ async function main() {
       balances: {
         'vh-NTHVvlKZqRxc8LyyTNok65yQ55a_PJ1zWLb9G2JI': 1
       },
-      claimable: [],
-      foo: 'bar'
+      claimable: []
     }),
-    //initState,
     evaluationManifest: {
       evaluationOptions: {
         sourceType: SourceType.WARP_SEQUENCER,
