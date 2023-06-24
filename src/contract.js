@@ -3,8 +3,10 @@ import { balance } from './read/balance.js'
 import { allow } from './write/allow.js'
 import { claim } from './write/claim.js'
 import { transfer } from './write/transfer.js'
+import { validate } from './read/validate.js'
 
 export async function handle(state, action) {
+  validate(state)
   switch (action.input?.function) {
     case "__init":
       return constructor(state, action)
