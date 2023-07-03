@@ -4,7 +4,7 @@ import { WarpFactory } from 'warp-contracts'
 import { DeployPlugin } from 'warp-contracts-plugin-deploy'
 import fs from 'fs'
 
-const eyeblobNumber = 41
+const eyeblobNumber = 46
 const eyeblob = fs.readFileSync(`./eye-blob-${eyeblobNumber}.png`)
 const jwk = JSON.parse(fs.readFileSync('./wallet.json'))
 
@@ -14,11 +14,12 @@ async function main() {
     { name: 'Content-Type', value: 'image/png' },
     { name: 'App-Name', value: 'SmartWeaveContract' },
     { name: 'App-Version', value: '0.3.0' },
-    { name: 'Contract-Src', value: 'DAzJJphpcjv6im1hUgFNGVP91eG9tayhX6NgMsoOHBQ' },
+    { name: 'Contract-Src', value: 'ynVNdtJwd28rcPxTu0fo_np06CZ0Vj2NyQUjtNNsxK8' },
     {
       name: 'Init-State', value: JSON.stringify({
         name: 'eye-blob',
         number: String(eyeblobNumber),
+        ticker: 'IBLOB',
         balances: {
           'YWECbIrjlJpc7ZhwTQCGjPAQyP4CgE_3YIDd8I0wgJ0': 100
         },

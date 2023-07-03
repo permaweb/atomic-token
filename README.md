@@ -13,8 +13,9 @@ The goal of this contract is to create a permanent atomic token contract that is
 
 You can use this source tx to deploy your atomic assets.
 
+
 ```
-IvO1BQ0yZHRuc0HizabgKMZOwCx4xAPGYebCB-mmm70
+YRFwCrnJDsPfh57gBVFHME3p5OLeh2MGi9Ssk7P540s
 ```
 
 ## Example (Dispatch and Warp)
@@ -37,7 +38,7 @@ export async function create(data, tags) {
   // Publish as Atomic Token, using defaults
   tx.addTag('App-Name', 'SmartWeaveContract')
   tx.addTag('App-Version', '0.3.0')
-  tx.addTag('Contract-Src', 'AaKdbvC2C8z7qIYKNUQdNihuDtA1GTHz2_Ok-vsHSbQ')
+  tx.addTag('Contract-Src', 'ynVNdtJwd28rcPxTu0fo_np06CZ0Vj2NyQUjtNNsxK8')
   tx.addTag('Init-State', JSON.stringify({}))
 
   const result = await arweaveWallet.dispatch(tx)
@@ -54,7 +55,8 @@ You will notice that the state is blank, this is because the constructor will de
   "ticker": "AA",
   "balances": {
     "[action.caller]": 100
-  }
+  },
+  "claimable": []
 }
 ```
 

@@ -8,6 +8,8 @@ import { validate } from './read/validate.js'
 export async function handle(state, action) {
   validate(state)
   switch (action.input?.function) {
+    case "noop":
+      return { state }
     case "__init":
       return constructor(state, action)
     case "balance":
