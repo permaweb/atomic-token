@@ -8,16 +8,19 @@ globalThis.ContractAssert = function (expr, msg) {
 }
 
 
-globalThis.ContractError = function (msg) {
-  return new Error(msg)
-}
-globalThis.SmartWeave = {
-  transaction: {
-    id: '1234'
-  }
-}
+
 
 test('ok', async () => {
+  
+  globalThis.ContractError = function (msg) {
+    return new Error(msg)
+  }
+  globalThis.SmartWeave = {
+    transaction: {
+      id: '1234'
+    }
+  }
+
   const { handle } = await import('../src/contract.js')
   const result = await handle({
     name: 'Token',

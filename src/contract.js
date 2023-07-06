@@ -4,6 +4,7 @@ import { allow } from './write/allow.js'
 import { claim } from './write/claim.js'
 import { transfer } from './write/transfer.js'
 import { validate } from './read/validate.js'
+import { reject } from './write/reject.js'
 
 export async function handle(state, action) {
   validate(state)
@@ -18,6 +19,8 @@ export async function handle(state, action) {
       return transfer(state, action).fold(handleError, identity)
     case "allow":
       return allow(state, action).fold(handleError, identity)
+    case "reject":
+      return reject(state, action).fold(handleError, identity)
     case "claim":
       return claim(state, action).fold(handleError, identity)
     default:
