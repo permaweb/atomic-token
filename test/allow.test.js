@@ -26,6 +26,7 @@ test('allow should create a claimable record', async () => {
     claimable: []
   }, { caller: 'qgdmaozpkycnvisvjfcbglxfvovejncdrvjgctzbhvs', input: { function: 'allow', target: 'sbqtsdcngxppybtjrlxmpgjoqpymyeddwfcyrmyvfue', qty: 100 } })
 
+  
   assert.equal(result.state.claimable[0].qty, 100)
   assert.ok(true)
 })
