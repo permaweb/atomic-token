@@ -14,7 +14,7 @@ The goal of this contract is to create a permanent atomic token contract that is
 You can use this source tx to deploy your atomic assets.
 
 ```
-ixh0RAgJzFGx4o_ul8jUdUeiO5RZ51fakgugmuh5v38
+Of9pi--Gj7hCTawhgxOwbuWnFI1h24TTgO5pw8ENJNQ
 ```
 
 ## Example (Dispatch and Warp)
@@ -37,9 +37,9 @@ export async function create(data, tags) {
   // Publish as Atomic Token, using defaults
   tx.addTag("App-Name", "SmartWeaveContract");
   tx.addTag("App-Version", "0.3.0");
-  tx.addTag("Contract-Src", "ixh0RAgJzFGx4o_ul8jUdUeiO5RZ51fakgugmuh5v38");
+  tx.addTag("Contract-Src", "Of9pi--Gj7hCTawhgxOwbuWnFI1h24TTgO5pw8ENJNQ");
   tx.addTag("Init-State", JSON.stringify({}));
-
+  tx.addTag("Contract-Manifest", '{"evaluationOptions":{"sourceType":"redstone-sequencer","allowBigInt":true,"internalWrites":true,"unsafeClient":"skip","useConstructor":true}}')
   const result = await arweaveWallet.dispatch(tx);
   await warp.register(tx.id, "node2");
   return result;

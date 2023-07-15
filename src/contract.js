@@ -3,11 +3,9 @@ import { balance } from './read/balance.js'
 import { allow } from './write/allow.js'
 import { claim } from './write/claim.js'
 import { transfer } from './write/transfer.js'
-import { validate } from './read/validate.js'
 import { reject } from './write/reject.js'
 
 export async function handle(state, action) {
-  validate(state)
   switch (action.input?.function) {
     case "noop":
       return { state }
